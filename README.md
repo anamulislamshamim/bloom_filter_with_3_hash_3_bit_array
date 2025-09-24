@@ -1,8 +1,3 @@
-Perfect 👌 — let’s go step by step.
-You want to **understand Bloom Filter** deeply, so I’ll explain as if I’m teaching you in a Google mentorship session.
-
----
-
 ### 🔹 What is a Bloom Filter?
 
 A **Bloom Filter** is a **probabilistic data structure** used to test if an element **might be in a set**.
