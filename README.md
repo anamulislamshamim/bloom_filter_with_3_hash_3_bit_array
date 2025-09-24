@@ -242,8 +242,7 @@ $$
   * Insert 1 million items (`n = 10^6`).
   * Want 1% false positive rate (`p = 0.01`).
   * Then `m ≈ 9.6 million bits ≈ 1.2 MB`.
-  * A plain hash set would need \~24 MB just to store the strings (ignoring overhead).
-
+  
 👉 Bloom filter is **10–20x more memory efficient**.
 
 ---
