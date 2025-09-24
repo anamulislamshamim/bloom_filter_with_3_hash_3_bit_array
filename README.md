@@ -36,7 +36,7 @@ class BloomFilter:
         # size = number of bits in the filter
         self.size = size
         # Initialize the bit array (all 0’s at the beginning)
-        self.bit_array = [0] * size
+        self.bit_arrays = [[0] * self.size for _ in range(3)]
 
     def _hashes(self, item):
         """
