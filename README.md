@@ -59,19 +59,17 @@ class BloomFilter:
         return [hash1, hash2, hash3]
 
     def add(self, item):
-        """Add an item to the Bloom filter."""
-        for hash_val in self._hashes(item):
-            # Mark these positions as 1
-            self.bit_array[hash_val] = 1
+        """Check if an item might be in the filter"""
+        for index, hash_val in enumerate(self._hashes(item)):
+            self.bit_arrays[index][hash_val] = 1
 
     def check(self, item):
         """Check if an item might be in the filter."""
-        for hash_val in self._hashes(item):
-            # If any of the positions is 0, the item is definitely not present
-            if self.bit_array[hash_val] == 0:
-                return False
-        # Otherwise, the item might exist
-        return True
+        for index, hash_val in enumerate(self._hashes(item)):
+            if self.bit_arrays[index][hash_val] == 0:
+                return False 
+        # The item might exist
+        return True    
 ```
 
 ---
